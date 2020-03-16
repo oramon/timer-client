@@ -20,8 +20,8 @@ function createApolloClient(initialState: any = {}) {
     link: new HttpLink({
       // Server URL (must be absolute)
       // uri: process.env.NODE_ENV === 'production' ? GRAPH_QL_HOST : GRAPH_QL_HOST,
-      credentials: 'same-origin', // Additional fetch() options like `credentials` or `headers`
       fetch,
+      credentials: 'same-origin', // Additional fetch() options like `credentials` or `headers`
     }),
     cache: new InMemoryCache().restore(initialState),
   });
