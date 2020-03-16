@@ -1,11 +1,11 @@
 import React from 'react';
 import { mount } from 'enzyme';
-import Index from '../index';
+import App from '../_app';
 
 describe('index page', () => {
   it('should have App component', () => {
-    const subject = mount(<Index />);
+    const subject = mount(<App />);
 
-    expect(subject.find('Home')).toHaveLength(1);
+    expect(subject.find('App')).toHaveLength(1);
   });
 });
